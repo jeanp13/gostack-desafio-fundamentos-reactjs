@@ -51,11 +51,12 @@ const Dashboard: React.FC = () => {
           ),
         }),
       );
+      const bal = response.data.balance;
 
       const balenceFormatted = {
-        income: formatValue(response.data.balance.income),
-        outcome: formatValue(response.data.balance.outcome),
-        total: formatValue(response.data.balance.total),
+        income: formatValue(bal.income),
+        outcome: formatValue(bal.outcome),
+        total: formatValue(bal.total),
       };
 
       setTransactions(transactionsFormated);
